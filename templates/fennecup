@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'fennec'
+if ARGV[0] == "s"
+	puts "starting server"
+	system("rackup config.ru")
+end
+Signal.trap("INT") { Fennec.teardown() }

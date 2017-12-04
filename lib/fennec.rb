@@ -10,7 +10,7 @@ require File.expand_path '../fennec/meta.rb', __FILE__
 module Fennec
 	class << self
 		def teardown()
-      puts "Fennec: shutting down.."
+			puts "Fennec: shutting down.."
     end
   end
   module Utils

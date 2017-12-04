@@ -1,30 +1,31 @@
 #!/usr/bin/env ruby
 require 'fennec'
+
 if ARGV[0]=="new"
-	if !ARGV[1].nil?
-		puts "Writing files"
-		puts "Creating  #{ARGV[1]} called"
-		system("mkdir #{ARGV[1]}")
-		puts "Creating config.ru"
-		system("cp #{Fennec::Utils.gem_libdir}/config.ru #{ARGV[1]}/config.ru")
-		puts "Creating bin folder"
-		system("mkdir #{ARGV[1]}/bin")
-		puts "Creating assets folder"
-		system("mkdir #{ARGV[1]}/assets")
-		puts "Creating javascript folder"
-		system("mkdir #{ARGV[1]}/assets/javascript")
-		puts "Creating stylesheets folder"
-		system("mkdir #{ARGV[1]}/assets/css")
-		puts "Creating views folder"
-		system("mkdir #{ARGV[1]}/views")
-		puts "Creating #{ARGV[1]}/fennecup"
-		system("cp #{Fennec::Utils.gem_libdir}/fennecup #{ARGV[1]}/bin/fennecup")
-		system("chmod a+x #{ARGV[1]}/bin/fennecup")
-		puts "Creating config.ru"
-		system("cp #{Fennec::Utils.gem_libdir}/Gemfile #{ARGV[1]}/Gemfile")
-		system("mkdir #{ARGV[1]}/actions")
-		puts "Done"
-	else
-		puts "Please name your app"
-	end
+  if !ARGV[1].nil?
+    puts "Writing files"
+    puts "Creating  #{ARGV[1]} called"
+    system("mkdir #{ARGV[1]}")
+    puts "Creating config.ru"
+    system("cp #{Fennec::Utils.gem_libdir}/config.ru #{ARGV[1]}/config.ru")
+    puts "Creating bin folder"
+    system("mkdir #{ARGV[1]}/bin")
+    puts "Creating assets folder"
+    system("mkdir #{ARGV[1]}/assets")
+    puts "Creating javascript folder"
+    system("mkdir #{ARGV[1]}/assets/javascript")
+    puts "Creating stylesheets folder"
+    system("mkdir #{ARGV[1]}/assets/css")
+    puts "Creating views folder"
+    system("mkdir #{ARGV[1]}/views")
+    puts "Creating #{ARGV[1]}/fennecup"
+    system("cp #{Fennec::Utils.gem_libdir}/fennecup #{ARGV[1]}/bin/fennecup")
+    system("chmod a+x #{ARGV[1]}/bin/fennecup")
+    puts "Creating config.ru"
+    system("cp #{Fennec::Utils.gem_libdir}/Gemfile #{ARGV[1]}/Gemfile")
+    system("mkdir #{ARGV[1]}/actions")
+    puts "Done"
+  else
+    puts "Please name your app"
+  end
 end
